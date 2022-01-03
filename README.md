@@ -5,6 +5,6 @@
 ## Install
 
 ```shell
-composer require 
+composer require mrtwenty/flower-client
 ```
 
