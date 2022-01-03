@@ -1,0 +1,19 @@
+{
+    "name": "mrtwenty/flower-client",
+    "description": "flower message queue client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mrtwenty",
+            "email": "mrtwenty@foxmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flower\\": "./src"
+        }
+    }
+}
