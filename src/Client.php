@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace Flower;
 
 /**
- * 消息队列
+ * Flower MQ client
+ * 客户端
  */
 class Client
 {
