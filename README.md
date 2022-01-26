@@ -15,7 +15,6 @@ $redis = new \Redis();
 $mq    = [
     'name'       => 'mq',
     'delay_name' => 'mq_delay',
-    'fail_list'  => 'mq_fail_list',
 ];
 $client = new Client($redis, $mq);
 

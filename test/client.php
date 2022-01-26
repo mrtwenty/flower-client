@@ -6,7 +6,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 function redis()
 {
-    $redis_host = '192.168.124.105';
+    $redis_host = '127.0.0.1';
     $redis_port = 6379;
     $redis_auth = '123456';
     $redis_db   = 1;
@@ -30,12 +30,9 @@ function redis()
     $redis->select($redis_db);
     return $redis;
 }
+
 $redis = redis();
-$mq    = [
-    'name' => 'mq',
-    'delay_name' => 'mq_delay',
-    'fail_list' => 'mq_fail_list'
-];
+$mq    = ['name' => 'mq', 'delay_name' => 'mq_delay'];
 $client = new Client($redis, $mq);
 
 $res = $client->add(['test' => 'data']);

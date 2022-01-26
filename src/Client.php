@@ -14,13 +14,13 @@ class Client
     protected $mq;
 
     /**
-     * @param mixed $redis 
+     * @param mixed $redis 连接redis
      * @param array $mq mq配置
      */
     public function __construct($redis, $mq)
     {
         $this->redis = $redis;
-        $this->mq = $mq; //name、delay_name、fail_list
+        $this->mq = $mq;
     }
 
     /**
@@ -38,7 +38,6 @@ class Client
         }
 
         $mq_delay_name = $this->mq['delay_name'];
-
         $now = time();
 
         //序列化
